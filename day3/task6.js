@@ -1,18 +1,29 @@
 
 function getQueue() {
-    {
-        // queue : [],
-        // enqueue(inn) {
-        //     getQueue.queue.push(inn)
-        // }
-    }
+    let queue = []
 
-    // let queue = []
-    
-    // function enqueue(inn){
-    //     queue.push(inn)
-    //     console.log(queue)
-    // } 
+    return{
+        enqueue(inn) {
+            queue.push(inn)
+            return queue
+        },
+        dequeue() {
+            if(queue.length === 0){
+                return "queue is empty"
+            }
+            else{
+               return queue.pop
+            }
+        },
+        peek() {
+            return queue[0]
+        },
+        isEmpty() {
+            if(queue.length === 0) {
+                return true
+            }
+        }
+    }
 }
 
 const myQueue = getQueue()

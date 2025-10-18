@@ -1,30 +1,25 @@
 
 function getTranspose(mtx){
 
-    let firsthalf = mtx[0]
-    let seconfHalf = mtx[1]
-
     let row = mtx.length
-    let column = firsthalf.length
-
+    let column = mtx[0].length
     let rowItem = []
-    let result = [];
     
     for(let i = 0; i < column; i++){
+        let temp = []
         for(let j = 0; j < row; j++) {
-            // console.log(mtx[j][i])
-            rowItem.push(mtx[j][i])
+            
+            temp.push(mtx[j][i])
         }
-        result.push(rowItem)
-        console.log(result);
+        rowItem.push(temp)
     }
-   
+    console.log(rowItem)
     
-  
-
 }
 
 getTranspose([
     [2, 9, 0], 
-    [7, 1, 5]
+    [7, 1, 5],
 ])
+
+// 

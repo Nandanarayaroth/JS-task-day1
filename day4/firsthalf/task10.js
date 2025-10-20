@@ -26,10 +26,15 @@ function Validity(str) {
 
   if (dotIndex - atIndex < 2) return false;
 
+  const extensionPart = str.slice(dotIndex + 1)
+  if (extensionPart.length < 2) return false
+
+
   return true;
 }
 
 console.log(Validity("user@domain"))
 console.log(Validity("user@domain.com"))
+console.log(Validity("user@123.in"))
 
 // 
